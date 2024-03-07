@@ -9,18 +9,8 @@ Scriviamo tutto (logica e layout) in un unico file index.php
 Milestone 2
 Verificato il corretto funzionamento del nostro codice, spostiamo la logica in un file functions.php che includeremo poi nella pagina principale
  -->
-
 <?php
-$passwordLenght = $_GET['passwordLenght'];
-var_dump($passwordLenght);
-
-function passwordGenerator($num)
-{
-    for ($i = 0; $i < $num; $i++) {
-        $randomAscii = rand(48, 122);
-        echo chr($randomAscii);
-    }
-}
+include __DIR__ . '/functions.php';
 ?>
 
 <!DOCTYPE html>
