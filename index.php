@@ -27,13 +27,21 @@ include __DIR__ . '/functions.php';
 
 <body>
     <div class="container mt-3">
+        <h1>Password generator</h1>
         <form action="" method="get">
-            <label for="passwordLenght">Lunghezza password</label>
+            <label class="d-block" for="passwordLenght">Lunghezza password</label>
             <input type="number" name="passwordLenght" id="passwordLenght">
-            <button type="submit">Genera password</button>
+            <button type="submit">Crea</button>
         </form>
-        <label for="password">Password generata</label>
-        <p id="password"><?= passwordGenerator($passwordLenght); ?></p>
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <label for="password">Password generata</label>
+            </div>
+            <div class="card-body">
+                <p id="password"><?= passwordGenerator($passwordLenght); ?></p>
+            </div>
+        </div>
     </div>
 </body>
 
