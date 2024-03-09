@@ -1,10 +1,16 @@
 <?php
-$passwordLenght = $_GET['passwordLenght'];
+$passwordLength = $_GET['passwordLength'];
 
+
+/**
+ * @param Number Password chars length
+ */
 function passwordGenerator($num)
 {
+    $password = '';
     for ($i = 0; $i < $num; $i++) {
         $randomAscii = rand(48, 122);
-        echo chr($randomAscii);
+        $password .= chr($randomAscii);
     }
+    return $password;
 }
